@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Brightside Dental — Gentle, modern dentistry in Manchester</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div id="pt"></div>
+<div id="intro" aria-hidden="true">
+  <div class="wordmark" id="wordmark"></div>
+  <svg class="smile" viewBox="0 0 200 70" aria-hidden="true">
+    <path d="M10 12 C 50 75, 150 75, 190 12" />
+  </svg>
+  <div class="tagline">Gentle modern dentistry</div>
+</div>
+
+<div class="emergency-strip">In pain right now? Select <strong>Emergency</strong> in the form — <a href="#book">we triage urgent cases instantly</a>.</div>
+
+<nav>
+  <a class="logo" href="index.html">Brightside<span>.</span></a>
+  <div class="nav-links">
+    <a href="treatments.html">Treatments</a>
+    <a href="index.html#how">How it works</a>
+    <a href="team.html">Meet the team</a>
+    <a href="faq.html">FAQ</a>
+    <a class="btn" href="#book">Book an appointment</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <h1 class="stage" style="--i:0">Dentistry that <em>calls you back</em> in seconds, not days.</h1>
+  <p class="lead stage" style="--i:1">Brightside Dental is a modern practice in the heart of Manchester. Request an appointment online and our smart reception system triages your request the moment it arrives — emergencies get a call back within minutes, not Monday.</p>
+  <div class="hero-actions stage" style="--i:2">
+    <a class="btn big" href="#book">Request an appointment</a>
+    <a href="#how" style="color: var(--teal); font-weight: 600; text-decoration: none;">See how it works ↓</a>
+  </div>
+  <p class="hero-note stage" style="--i:3">New patients welcome · NHS &amp; private · Open Mon–Sat</p>
+</header>
+
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track" id="marqueeTrack">
+    <span>Same-day emergency slots <em>✦</em></span>
+    <span>Average callback today: 42 seconds <em>✦</em></span>
+    <span>NHS &amp; private patients <em>✦</em></span>
+    <span>0% finance available <em>✦</em></span>
+    <span>Rated 4.9 by our patients <em>✦</em></span>
+    <span>Nervous patients our speciality <em>✦</em></span>
+  </div>
+</div>
+
+<section class="services" id="services">
+  <div class="container">
+    <p class="kicker reveal">Treatments</p>
+    <h2 class="section-title">Everything your smile needs, under one roof.</h2>
+    <p class="section-sub reveal">From six-monthly check-ups to full smile makeovers — honest advice, transparent pricing, and absolutely no lectures about flossing.</p>
+    <div class="cards">
+      <div class="card reveal"><span class="icon">🦷</span><h3>Check-up &amp; clean</h3><p>Thorough examination and hygienist clean. The foundation of healthy teeth, recommended every six months.</p><span class="price">from £45</span></div>
+      <div class="card urgent reveal"><span class="icon">⚡</span><h3>Emergency &amp; tooth pain</h3><p>Severe pain, swelling or a broken tooth? We hold same-day slots for emergencies and triage requests instantly.</p><span class="price">Same-day slots held daily</span></div>
+      <div class="card reveal"><span class="icon">✨</span><h3>Teeth whitening</h3><p>Professional, safe whitening that lifts years of staining — at-home kits or in-chair treatment.</p><span class="price">from £249</span></div>
+      <div class="card reveal"><span class="icon">😁</span><h3>Invisalign &amp; braces</h3><p>Discreet clear aligners and modern orthodontics, with a free initial consultation and 3D scan.</p><span class="price">from £42/month</span></div>
+    </div>
+    <div class="section-cta reveal"><a class="btn ghost" href="treatments.html">Explore all treatments →</a></div>
+  </div>
+</section>
+
+<div class="stats">
+  <div class="stats-grid">
+    <div class="stat reveal"><div class="num">12+</div><div class="lbl">years caring for Manchester</div></div>
+    <div class="stat reveal"><div class="num">9,400</div><div class="lbl">smiles looked after</div></div>
+    <div class="stat reveal"><div class="num">4.9★</div><div class="lbl">average patient rating</div></div>
+    <div class="stat reveal"><div class="num">42s</div><div class="lbl">average callback today</div></div>
+  </div>
+</div>
+
+<section id="how">
+  <div class="container">
+    <p class="kicker reveal">How it works</p>
+    <h2 class="section-title">From request to appointment, without the phone queue.</h2>
+    <div class="how-grid">
+      <div>
+        <div class="steps">
+          <div class="step reveal"><div><h3>Tell us what you need</h3><p>Fill in the 60-second form below — what's bothering you and when suits you best. No account, no app, no hold music.</p></div></div>
+          <div class="step reveal"><div><h3>We triage instantly</h3><p>Our smart reception reads your request the moment it arrives, writes your confirmation, and flags anything urgent straight to the team.</p></div></div>
+          <div class="step reveal"><div><h3>You get a call back</h3><p>Reception calls to confirm your appointment — same day for emergencies, within one working day otherwise. Watch it happen live on the right.</p></div></div>
+        </div>
+      </div>
+      <div class="feed-panel reveal">
+        <div class="feed-header"><div class="dot"></div> Smart reception — live</div>
+        <div class="feed" id="feed"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="team-teaser">
+  <div class="container">
+    <p class="kicker reveal">Meet the team</p>
+    <h2 class="section-title">The people behind the smiles.</h2>
+    <p class="section-sub reveal">Six friendly faces, zero judgement about how long it's been since your last check-up.</p>
+    <div class="face-row reveal">
+      <div class="avatar a1">AO<img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Dr. Amara Okafor" loading="lazy" onerror="this.remove()"></div>
+      <div class="avatar a2">JW<img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Dr. James Whitfield" loading="lazy" onerror="this.remove()"></div>
+      <div class="avatar a5">TR<img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Dr. Tomás Rivera" loading="lazy" onerror="this.remove()"></div>
+      <div class="avatar a3">PS<img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Priya Sharma" loading="lazy" onerror="this.remove()"></div>
+      <div class="avatar a6">MC<img src="https://randomuser.me/api/portraits/women/26.jpg" alt="Maya Chen" loading="lazy" onerror="this.remove()"></div>
+      <div class="avatar a4">EB<img src="https://randomuser.me/api/portraits/women/90.jpg" alt="Elsie Barnes" loading="lazy" onerror="this.remove()"></div>
+    </div>
+    <div class="section-cta reveal"><a class="btn" href="team.html">Meet the whole team →</a></div>
+  </div>
+</section>
+
+<section class="testimonials">
+  <div class="container">
+    <p class="kicker reveal">What patients say</p>
+    <h2 class="section-title">Don't take our word for it.</h2>
+    <p class="team-note reveal">Demo content — illustrative reviews.</p>
+    <div class="quote-grid">
+      <div class="quote reveal">
+        <div class="stars">★★★★★</div>
+        <blockquote>"I filled in the form at 8am with a cracked tooth. My phone rang before I'd finished my coffee. Seen the same afternoon."</blockquote>
+        <div class="who"><div class="mini" style="background:#0e7569;">MT</div><div><strong>Marcus T.</strong><span>Emergency appointment</span></div></div>
+      </div>
+      <div class="quote reveal">
+        <div class="stars">★★★★★</div>
+        <blockquote>"I've been terrified of dentists my whole life. Dr. Okafor is the first one who didn't make me feel silly about it."</blockquote>
+        <div class="who"><div class="mini" style="background:#b45309;">SK</div><div><strong>Sarah K.</strong><span>Nervous patient</span></div></div>
+      </div>
+      <div class="quote reveal">
+        <div class="stars">★★★★★</div>
+        <blockquote>"Eight months of Invisalign and I genuinely can't stop smiling at myself in shop windows. Worth every penny."</blockquote>
+        <div class="who"><div class="mini" style="background:#4338ca;">DA</div><div><strong>Daniel A.</strong><span>Invisalign patient</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="booking" id="book">
+  <div class="container booking-grid">
+    <div>
+      <p class="kicker reveal">Book an appointment</p>
+      <h2 class="section-title">Request your appointment now.</h2>
+      <p class="sub reveal">No account, no phone queue. Tell us what you need and we'll call you back to confirm a time that works.</p>
+      <ul class="booking-perks reveal">
+        <li>Emergencies triaged the moment you submit</li>
+        <li>Email confirmation sent instantly</li>
+        <li>Reception calls back within one working day</li>
+      </ul>
+      <div class="booking-quote reveal">"My phone rang before I'd finished my coffee."<span>— Marcus T., emergency patient</span></div>
+    </div>
+    <div>
+      <form id="bookingForm" novalidate>
+        <div class="field-row">
+          <div class="field">
+            <label for="f-name">Full name <span class="req">*</span></label>
+            <input id="f-name" name="name" type="text" placeholder="Jane Doe" required>
+          </div>
+          <div class="field">
+            <label for="f-phone">Phone number <span class="req">*</span></label>
+            <input id="f-phone" name="phone" type="tel" placeholder="07123 456789" required>
+          </div>
+        </div>
+        <div class="field">
+          <label for="f-email">Email</label>
+          <input id="f-email" name="email" type="email" placeholder="jane@example.com">
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="f-treatment">What do you need? <span class="req">*</span></label>
+            <select id="f-treatment" name="treatment" required>
+              <option value="" disabled selected>Choose…</option>
+              <option>Check-up &amp; clean</option>
+              <option>Emergency / tooth pain</option>
+              <option>Teeth whitening</option>
+              <option>Invisalign / braces</option>
+              <option>Something else</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="f-time">Preferred time of day</label>
+            <select id="f-time" name="preferredTime">
+              <option>Any time</option>
+              <option>Morning</option>
+              <option>Afternoon</option>
+              <option>Evening</option>
+            </select>
+          </div>
+        </div>
+        <div class="emergency-note" id="emergencyNote">⚡ Emergency requests are flagged the moment you submit — we'll call you back as a priority.</div>
+        <div class="field">
+          <label for="f-notes">Anything else we should know?</label>
+          <textarea id="f-notes" name="notes" placeholder="e.g. nervous patient, specific dentist, insurance"></textarea>
+        </div>
+        <button class="btn big" type="submit" id="submitBtn">Request appointment<span class="arrow">→</span></button>
+        <div class="form-status" id="formStatus"></div>
+      </form>
+      <div class="form-success" id="formSuccess">
+        <svg class="check" viewBox="0 0 64 64" aria-hidden="true">
+          <circle cx="32" cy="32" r="29" />
+          <path d="M20 33 L28 41 L45 24" />
+        </svg>
+        <h3 style="color: var(--white);">Request received!</h3>
+        <p style="color: var(--cream);">Our reception team will call you back shortly. If you gave us your email, a confirmation is already on its way.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="visit">
+  <div class="container">
+    <p class="kicker reveal">Visit us</p>
+    <h2 class="section-title">Right in the heart of Manchester.</h2>
+    <div class="visit-grid">
+      <div class="reveal">
+        <p class="section-sub">Two minutes from Piccadilly Gardens, with step-free access and parking on Example Row.</p>
+        <div class="hours">
+          <div class="row"><span>Monday – Thursday</span><span>8:00 – 18:00</span></div>
+          <div class="row"><span>Friday</span><span>8:00 – 17:00</span></div>
+          <div class="row"><span>Saturday</span><span>9:00 – 13:00</span></div>
+          <div class="row"><span>Sunday</span><span>Closed</span></div>
+        </div>
+        <p class="contact-line">📍 14 Example Row, Manchester M1 2AB<br>📞 <strong>0161 000 0000</strong> · ✉️ <strong>hello@brightsidedental.co.uk</strong></p>
+      </div>
+      <div class="map-wrap reveal">
+        <iframe title="Map — Manchester city centre" src="https://www.google.com/maps?q=Piccadilly+Gardens,+Manchester&output=embed" loading="lazy"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  Brightside Dental · 14 Example Row, Manchester M1 2AB · Demo site — built by Luthen Studio
+</footer>
+
+<script src="site.js"></script>
+</body>
+</html>
