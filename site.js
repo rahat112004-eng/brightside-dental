@@ -162,3 +162,41 @@ const io = new IntersectionObserver((entries) => {
   entries.forEach(en => { if (en.isIntersecting) { en.target.classList.add('visible'); io.unobserve(en.target); } });
 }, { threshold: 0.15 });
 document.querySelectorAll('.reveal, .section-title, .page-hero h1').forEach(el => io.observe(el));
+
+/* ---------- AI chat assistant (n8n + Claude) ---------- */
+(function () {
+  const CHAT_WEBHOOK = 'https://rahat.app.n8n.cloud/webhook/fd55cb4c-bb2f-4f01-9354-ef66263275fd/chat';
+
+  // Brand the widget to match the site (teal)
+  const brand = document.createElement('style');
+  brand.textContent = ':root{--chat--color-primary:#0e7569;--chat--color-primary-shade-50:#0a5a50;--chat--color-primary-shade-100:#0a5a50;--chat--color-secondary:#0e7569;--chat--toggle--background:#0e7569;--chat--toggle--hover--background:#0a5a50;--chat--header--background:#0e7569;--chat--header--color:#ffffff;--chat--message--user--background:#0e7569;--chat--border-radius:14px;}';
+  document.head.appendChild(brand);
+
+  const css = document.createElement('link');
+  css.rel = 'stylesheet';
+  css.href = 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css';
+  document.head.appendChild(css);
+
+  import('https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js')
+    .then(({ createChat }) => {
+      createChat({
+        webhookUrl: CHAT_WEBHOOK,
+        mode: 'window',
+        showWelcomeScreen: false,
+        initialMessages: [
+          'Hi! 👋 I’m Brightside Dental’s assistant.',
+          'Ask me about treatments or opening hours — or tell me what you need and I’ll help you book.'
+        ],
+        i18n: {
+          en: {
+            title: 'Brightside Dental',
+            subtitle: 'Ask a question or book an appointment',
+            getStarted: 'New conversation',
+            inputPlaceholder: 'Type your message…',
+            footer: ''
+          }
+        }
+      });
+    })
+    .catch(() => {});
+})();
