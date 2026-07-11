@@ -94,7 +94,7 @@ if (track) track.innerHTML += track.innerHTML;
 /* ---------- Booking form → n8n webhook ---------- */
 // Production URL goes live once the n8n workflow is published.
 // For editor testing use '/webhook-test/dental-lead' and click "Execute workflow" in n8n first.
-const WEBHOOK_URL = 'https://rahat.app.n8n.cloud/webhook/dental-lead';
+const WEBHOOK_URL = 'https://luthen.app.n8n.cloud/webhook/dental-lead';
 
 const form = document.getElementById('bookingForm');
 if (form) {
@@ -165,7 +165,7 @@ document.querySelectorAll('.reveal, .section-title, .page-hero h1').forEach(el =
 
 /* ---------- AI chat assistant (n8n + Claude) ---------- */
 (function () {
-  const CHAT_WEBHOOK = 'https://rahat.app.n8n.cloud/webhook/fd55cb4c-bb2f-4f01-9354-ef66263275fd/chat';
+  const CHAT_WEBHOOK = 'https://luthen.app.n8n.cloud/webhook/98aeb73b-fd55-432a-9222-eef711c832aa/chat';
 
   // Brand the widget to match the site (teal) + smooth fade-in entrance
   const brand = document.createElement('style');
