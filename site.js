@@ -210,3 +210,62 @@ document.querySelectorAll('.reveal, .section-title, .page-hero h1').forEach(el =
   const delay = reduceMotion ? 0 : (introPlaying ? 3900 : 700);
   setTimeout(initChat, delay);
 })();
+
+/* ---------- AI voice receptionist (Vapi + Claude) ---------- */
+(function () {
+  const VAPI_PUBLIC_KEY = '415348ec-2b01-4aea-a051-d2b636a85039';
+  const VAPI_ASSISTANT_ID = '476a99da-eea8-45b8-aae5-74be8126bef0';
+
+  const buttonConfig = {
+    position: 'bottom-left',
+    offset: '24px',
+    width: '56px',
+    height: '56px',
+    idle: {
+      color: 'rgb(14,117,105)',
+      type: 'pill',
+      title: 'Speak to our receptionist',
+      subtitle: 'Live voice · answers instantly',
+      icon: 'https://unpkg.com/lucide-static@0.321.0/icons/phone.svg'
+    },
+    loading: {
+      color: 'rgb(10,90,80)',
+      type: 'pill',
+      title: 'Connecting…',
+      subtitle: 'One moment please',
+      icon: 'https://unpkg.com/lucide-static@0.321.0/icons/loader-2.svg'
+    },
+    active: {
+      color: 'rgb(179,38,30)',
+      type: 'pill',
+      title: 'Call in progress…',
+      subtitle: 'Tap to end the call',
+      icon: 'https://unpkg.com/lucide-static@0.321.0/icons/phone-off.svg'
+    }
+  };
+
+  const style = document.createElement('style');
+  style.textContent = '#vapi-support-btn{animation:bsChatIn .6s cubic-bezier(0.16,1,0.3,1) both;}';
+  document.head.appendChild(style);
+
+  function initVoice() {
+    const s = document.createElement('script');
+    s.src = 'https://cdn.jsdelivr.net/gh/VapiAI/html-script-tag@latest/dist/assets/index.js';
+    s.defer = true;
+    s.async = true;
+    s.onload = function () {
+      if (window.vapiSDK) {
+        window.vapiSDK.run({
+          apiKey: VAPI_PUBLIC_KEY,
+          assistant: VAPI_ASSISTANT_ID,
+          config: buttonConfig
+        });
+      }
+    };
+    document.body.appendChild(s);
+  }
+
+  const introPlaying = !!document.getElementById('intro');
+  const delay = reduceMotion ? 0 : (introPlaying ? 3900 : 700);
+  setTimeout(initVoice, delay);
+})();
